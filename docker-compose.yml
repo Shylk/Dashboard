@@ -1,0 +1,62 @@
+version: '3.7'
+
+networks:
+  front-tier:
+  back-tier:
+
+volumes:
+  db-data:
+
+services:
+  db:
+    hostname: "db"
+    image: postgres:14.1
+    container_name: db_container
+    environment:
+      POSTGRES_SERVICE: postgres
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: dashboard
+      POSTGRES_DB: postgres
+      POSTGRES_DB_PORT: 5432
+    ports:
+      - "5432:5432"
+    restart: always
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - back-tier
+    
+  server:
+    hostname: "server"
+    image: shelyp/server:latest
+    container_name: server_container
+    environment:
+      NODE_OPTIONS: "--max-old-space-size=4096"
+    ports:
+      - "8080:8080"
+    build: ./server/
+    restart: always
+    depends_on:
+      - db
+    networks:
+      - back-tier
+    volumes:
+      - ./server:/server
+      - ./server/node_modules
+
+  client:
+    hostname: "client"
+    image: shelyp/client:latest
+    container_name: client_container
+    ports:
+      - "3000:3000"
+    build: ./client/
+    restart: always
+    # depends_on:
+    #   - db
+    networks:
+      - back-tier
+      - front-tier
+    volumes:
+      - ./client:/client
+      - ./client/node_modules

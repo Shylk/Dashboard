@@ -1,0 +1,190 @@
+{
+    "client": {
+        "host": "127.0.0.1"
+    },
+    " server ": {
+        "current_time": 1638653389,
+        "services": [
+            {
+                "name": "Weather",
+                "widgets": [
+                    {
+                        "name": "Temperature",
+                        "description": "Display temperature for a city",
+                        "params": [
+                            {
+                                "name": "city",
+                                "type": "string"
+                            },
+                            {
+                                "name": "unit",
+                                "type": "string"
+                            },
+                            {
+                                "name": "timer",
+                                "type": "int"
+                            }
+                        ]
+                    }
+                ] 
+            },
+            {
+                "name": "YouTube",
+                "widgets": [
+                    {
+                        "name": "Channel subscribers",
+                        "description": "Display the number of subscribers of a youtube channel",
+                        "params": [
+                            {
+                                "name": "channel",
+                                "type": "string"
+                            },
+                            {
+                                "name": "timer",
+                                "type": "int"
+                            }
+                            
+                        ]
+                    },
+                    {
+                        "name": "Video views",
+                        "description": "Display the number of views of a youtube video",
+                        "params": [
+                            {
+                                "name": "channel",
+                                "type": "string"
+                            },
+                            {
+                                "name": "timer",
+                                "type": "int"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Video comments",
+                        "description": "Display the comments of a youtube video",
+                        "params": [
+                            {
+                                "name": "channel",
+                                "type": "string"
+                            },
+                            {
+                                "name": "limit",
+                                "type": "int"
+                            },
+                            {
+                                "name": "timer",
+                                "type": "int"
+                            }
+                        ]
+                    }
+                ] 
+            },
+            {
+                "name": "Reddit",
+                "widgets": [
+                    {
+                        "name": "Subreddit details",
+                        "description": "Display the details about a subreddit",
+                        "params": [
+                            {
+                                "name": "subredditName",
+                                "type": "string"
+                            },
+                            {
+                                "name": "timer",
+                                "type": "int"
+                            }
+                        ]
+                    }
+                ] 
+            },
+            {
+                "name": "Steam",
+                "widgets": [
+                    {
+                        "name": "Number of players",
+                        "description": "Display the number of current players in a game",
+                        "params": [
+                            {
+                                "name": "gameId",
+                                "type": "int"
+                            },
+                            {
+                                "name": "timer",
+                                "type": "int"
+                            }
+                        ]
+                    }
+                ] 
+            },
+            {
+                "name": "Twitch",
+                "widgets": [
+                    {
+                        "name": "User Viewers Count",
+                        "description": "Display the number of current viewers of a stream",
+                        "params": [
+                            {
+                                "name": "channel",
+                                "type": "string"
+                            },
+                            {
+                                "name": "timer",
+                                "type": "int"
+                            }
+                            
+                        ]
+                    },
+                    {
+                        "name": "Top streams by language",
+                        "description": "Display the top streams in the given language",
+                        "params": [
+                            {
+                                "name": "language",
+                                "type": "string"
+                            },
+                            {
+                                "name": "timer",
+                                "type": "int"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Top streams by game",
+                        "description": "Display the top streams in the given game",
+                        "params": [
+                            {
+                                "name": "game",
+                                "type": "string"
+                            },
+                            {
+                                "name": "timer",
+                                "type": "int"
+                            }
+                        ]
+                    }
+                ] 
+            },
+            {
+                "name": "Covid 19",
+                "widgets": [
+                    {
+                        "name": "Covid tracker by country",
+                        "description": "Display the number of covid cases in the given country",
+                        "params": [
+                            {
+                                "name": "country",
+                                "type": "string"
+                            },
+                            {
+                                "name": "timer",
+                                "type": "int"
+                            }
+                        ]
+                    }
+                ] 
+            }
+        ]
+    }
+}
