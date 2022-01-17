@@ -1,7 +1,7 @@
 # Dashboard
 A dashboard based on public API to create customizable widgets
 
-Project made in __Javascript (React), __ with __Ilias Lamrani__.
+Project made in __Javascript (React)__, with __Ilias Lamrani__.
 Database: __PostgreSQL, prisma__.
 Ops: __Docker, Docker-compose__.
 
